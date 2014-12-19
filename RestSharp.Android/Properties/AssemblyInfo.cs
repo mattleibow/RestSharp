@@ -14,3 +14,5 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("A7B3BEB4-1B9B-4EDF-98BC-DF9EC82390BF")]
+
+[assembly: InternalsVisibleTo("RestSharp.Android.Tests")]

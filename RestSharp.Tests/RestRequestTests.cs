@@ -68,7 +68,7 @@ namespace RestSharp.Tests
         {
             var request = new RestRequest();
 
-            Assert.DoesNotThrow(() => request.AddHeader("Host", value));
+			request.AddHeader("Host", value);
         }
     }
 }

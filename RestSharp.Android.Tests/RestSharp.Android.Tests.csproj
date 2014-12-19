@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{C15EE0A3-3697-4315-B988-9132E0567760}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RestSharp.Android.Tests</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>RestSharp.Android.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.NUnitLite" />
+    <Reference Include="xunit.abstractions">
+      <HintPath>..\packages\xunit.abstractions.2.0.0-beta5-build2785\lib\portable-net45+aspnetcore50+win+wpa81+wp80+monotouch+monoandroid\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core">
+      <HintPath>..\packages\xunit.core.2.0.0-beta5-build2785\lib\portable-net45+aspnetcore50+win+wpa81+wp80+monotouch+monoandroid\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution">
+      <HintPath>..\packages\xunit.execution.2.0.0-beta5-build2785\lib\monoandroid\xunit.execution.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert">
+      <HintPath>..\packages\xunit.assert.2.0.0-beta5-build2785\lib\portable-net45+aspnetcore50+win+wpa81+wp80+monoandroid+monotouch10\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.19.1.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\packages\Xamarin.Forms.1.3.0.6275-pre1\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="FormsViewGroup">
+      <HintPath>..\packages\Xamarin.Forms.1.3.0.6275-pre1\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.3.0.6275-pre1\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.3.0.6275-pre1\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.runner.android">
+      <HintPath>..\packages\xunit.runner.xamarin.0.99.5-beta5\lib\MonoAndroid\xunit.runner.android.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.runner.utility">
+      <HintPath>..\packages\xunit.runner.utility.2.0.0-beta5-build2785\lib\monoandroid\xunit.runner.utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\RestSharp.Tests\CultureChange.cs">
+      <Link>RestSharp.Tests\CultureChange.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\JsonTests.cs">
+      <Link>RestSharp.Tests\JsonTests.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\NamespacedXmlTests.cs">
+      <Link>RestSharp.Tests\NamespacedXmlTests.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\OAuthTests.cs">
+      <Link>RestSharp.Tests\OAuthTests.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\RestRequestTests.cs">
+      <Link>RestSharp.Tests\RestRequestTests.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SerializerTests.cs">
+      <Link>RestSharp.Tests\SerializerTests.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SimpleJson.cs">
+      <Link>RestSharp.Tests\SimpleJson.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\StringExtensionsTests.cs">
+      <Link>RestSharp.Tests\StringExtensionsTests.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\UrlBuilderTests.cs">
+      <Link>RestSharp.Tests\UrlBuilderTests.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\XmlAttributeDeserializerTests.cs">
+      <Link>RestSharp.Tests\XmlAttributeDeserializerTests.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\XmlDeserializerTests.cs">
+      <Link>RestSharp.Tests\XmlDeserializerTests.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\Fakes\NullHttp.cs">
+      <Link>RestSharp.Tests\Fakes\NullHttp.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\BooleanTest.cs">
+      <Link>RestSharp.Tests\SampleClasses\BooleanTest.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\EmployeeTracker.cs">
+      <Link>RestSharp.Tests\SampleClasses\EmployeeTracker.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\EnumTest.cs">
+      <Link>RestSharp.Tests\SampleClasses\EnumTest.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\GoogleWeatherWithAttributes.cs">
+      <Link>RestSharp.Tests\SampleClasses\GoogleWeatherWithAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\JsonLists.cs">
+      <Link>RestSharp.Tests\SampleClasses\JsonLists.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\Lastfm.cs">
+      <Link>RestSharp.Tests\SampleClasses\Lastfm.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\ListSamples.cs">
+      <Link>RestSharp.Tests\SampleClasses\ListSamples.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\Oddball.cs">
+      <Link>RestSharp.Tests\SampleClasses\Oddball.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\SOUser.cs">
+      <Link>RestSharp.Tests\SampleClasses\SOUser.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\Struct.cs">
+      <Link>RestSharp.Tests\SampleClasses\Struct.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\TwilioCallList.cs">
+      <Link>RestSharp.Tests\SampleClasses\TwilioCallList.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\eventful.cs">
+      <Link>RestSharp.Tests\SampleClasses\eventful.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\foursq.cs">
+      <Link>RestSharp.Tests\SampleClasses\foursq.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\googleweather.cs">
+      <Link>RestSharp.Tests\SampleClasses\googleweather.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\misc.cs">
+      <Link>RestSharp.Tests\SampleClasses\misc.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\nullables.cs">
+      <Link>RestSharp.Tests\SampleClasses\nullables.cs</Link>
+    </Compile>
+    <Compile Include="..\RestSharp.Tests\SampleClasses\twitter.cs">
+      <Link>RestSharp.Tests\SampleClasses\twitter.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="..\packages\xunit.core.2.0.0-beta5-build2785\build\monoandroid\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.0.0-beta5-build2785\build\monoandroid\xunit.core.props')" />
+  <Import Project="..\packages\Xamarin.Forms.1.3.0.6275-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.0.6275-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\xunit.runner.xamarin.0.99.5-beta5\build\MonoAndroid\xunit.runner.xamarin.props" Condition="Exists('..\packages\xunit.runner.xamarin.0.99.5-beta5\build\MonoAndroid\xunit.runner.xamarin.props')" />
+  <Import Project="..\packages\xunit.runner.xamarin.0.99.5-beta5\build\MonoAndroid\xunit.runner.xamarin.targets" Condition="Exists('..\packages\xunit.runner.xamarin.0.99.5-beta5\build\MonoAndroid\xunit.runner.xamarin.targets')" />
+  <ItemGroup>
+    <Folder Include="RestSharp.Tests\" />
+    <Folder Include="Assets\SampleData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestSharp.Android\RestSharp.Android.csproj">
+      <Project>{1B662C38-984F-4B6A-89B5-AFF7FCBE43A2}</Project>
+      <Name>RestSharp.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\4sq.txt">
+      <Link>Assets\SampleData\4sq.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\GenericWithList.txt">
+      <Link>Assets\SampleData\GenericWithList.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\GoogleWeather.xml">
+      <Link>Assets\SampleData\GoogleWeather.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\InlineListSample.xml">
+      <Link>Assets\SampleData\InlineListSample.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\Lastfm.xml">
+      <Link>Assets\SampleData\Lastfm.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\ListWithAttributes.xml">
+      <Link>Assets\SampleData\ListWithAttributes.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\NestedListSample.xml">
+      <Link>Assets\SampleData\NestedListSample.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\boolean_from_number.xml">
+      <Link>Assets\SampleData\boolean_from_number.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\boolean_from_string.xml">
+      <Link>Assets\SampleData\boolean_from_string.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\datetimes.txt">
+      <Link>Assets\SampleData\datetimes.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\directlists.xml">
+      <Link>Assets\SampleData\directlists.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\eventful.xml">
+      <Link>Assets\SampleData\eventful.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\iso8601datetimes.txt">
+      <Link>Assets\SampleData\iso8601datetimes.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\jsonarray.txt">
+      <Link>Assets\SampleData\jsonarray.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\jsondictionary.txt">
+      <Link>Assets\SampleData\jsondictionary.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\jsonenums.txt">
+      <Link>Assets\SampleData\jsonenums.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\jsonenumtypes.txt">
+      <Link>Assets\SampleData\jsonenumtypes.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\jsonlists.txt">
+      <Link>Assets\SampleData\jsonlists.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\objectproperty.txt">
+      <Link>Assets\SampleData\objectproperty.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\person.json.txt">
+      <Link>Assets\SampleData\person.json.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\restsharp.nuspec">
+      <Link>Assets\SampleData\restsharp.nuspec</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\sojson.txt">
+      <Link>Assets\SampleData\sojson.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\timespans.txt">
+      <Link>Assets\SampleData\timespans.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\underscore_prefix.txt">
+      <Link>Assets\SampleData\underscore_prefix.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\RestSharp.Tests\SampleData\xmllists.xml">
+      <Link>Assets\SampleData\xmllists.xml</Link>
+    </AndroidAsset>
+  </ItemGroup>
+</Project>

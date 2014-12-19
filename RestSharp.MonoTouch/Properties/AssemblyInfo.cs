@@ -14,3 +14,5 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("0F11B2CA-D65D-4B63-92B2-E4C0B1AACB6E")]
+
+[assembly: InternalsVisibleTo("RestSharpMonoTouchTests")]
