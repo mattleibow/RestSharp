@@ -72,7 +72,7 @@ copy RestSharp.Silverlight\bin\Release\RestSharp.dll Download\Package\lib\sl5\
 copy RestSharp.WindowsPhone.8.0\bin\Release\RestSharp.dll Download\Package\lib\windowsphone8\
 copy RestSharp.WindowsPhone.8.1\bin\Release\RestSharp.dll Download\Package\lib\windowsphone81\
 copy RestSharp.iOS\bin\Release\RestSharp.dll Download\package\lib\Xamarin.iOS10\
-copy RestSharp.MonoTouch\bin\Release\RestSharp.dll Download\package\lib\MonoAndroid10\
+copy RestSharp.MonoTouch\bin\Release\RestSharp.dll Download\package\lib\MonoTouch10\
 copy RestSharp.Android\bin\Release\RestSharp.dll Download\package\lib\MonoAndroid10\
 
 copy RestSharp\bin\Release\RestSharp.xml Download\Package\lib\net35\
@@ -85,7 +85,7 @@ copy RestSharp.Silverlight\bin\Release\RestSharp.xml Download\Package\lib\sl5\
 copy RestSharp.WindowsPhone.8.0\bin\Release\RestSharp.xml Download\Package\lib\windowsphone8\
 copy RestSharp.WindowsPhone.8.1\bin\Release\RestSharp.xml Download\Package\lib\windowsphone81\
 copy RestSharp.iOS\bin\Release\RestSharp.xml Download\package\lib\Xamarin.iOS10\
-copy RestSharp.MonoTouch\bin\Release\RestSharp.xml Download\package\lib\MonoAndroid10\
+copy RestSharp.MonoTouch\bin\Release\RestSharp.xml Download\package\lib\MonoTouch10\
 copy RestSharp.Android\bin\Release\RestSharp.xml Download\package\lib\MonoAndroid10\
 
 copy RestSharp\bin\ReleaseSigned\RestSharp.dll DownloadSigned\Package\lib\net35\
